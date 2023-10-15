@@ -4,7 +4,7 @@
 ## 示例
 
 ```javascript
-const obj = exReg({
+const options = {
   reg: /ersd[[m=reg:(ka)+]].*ef(fa){[[m]]}.*sas/g, //可选，创建时未传入则生成后需要通过 obj.reg 设置后调用方法才有效。
   fns: {
     reg([$0, $1]) {
@@ -14,7 +14,8 @@ const obj = exReg({
     }
   },
   str: 'bvgvgersdkakakaeffafaeffafafasaskuyfu' //可选，创建时未传入则生成后需要通过 obj.str 设置后调用方法才有效。
-});
+};
+const obj = ExRegExp(options);
 console.log('match1:', {
   match: obj.match(),//执行match方法
   reg: obj.reg

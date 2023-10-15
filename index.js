@@ -1,6 +1,6 @@
-import exReg from "./utils/public/ExReg";
+import ExRegExp from "./utils/public/ExRegExp.js";
 //示例：
-const obj = exReg({
+const obj = ExRegExp({
   reg: /ersd[[reg:(ka)+]].*ef(fa){[[reg]]}.*sas/g, //可选，创建时未传入则生成后需要通过 obj.reg 设置后调用方法才有效。
   fns: {
     reg([$0, $1]) {
